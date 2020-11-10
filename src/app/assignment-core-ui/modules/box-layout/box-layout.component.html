@@ -1,0 +1,38 @@
+<div class="box">
+  <!-- Box heading -->
+  <div class="box-heading__container">
+    <div class="container box-heading__inner">
+      <!--Left side-->
+      <div class="left">
+        <ng-template [ngTemplateOutlet]="getSectionTemplate('left') || defaultLeftSideTemplate"></ng-template>
+      </div>
+
+      <!--Middle-->
+      <div class="middle">
+        <ng-template [ngTemplateOutlet]="getSectionTemplate('middle') || defaultMiddleTemplate"></ng-template>
+      </div>
+
+      <!--Right side-->
+      <div class="right">
+        <ng-template [ngTemplateOutlet]="getSectionTemplate('right') || defaultRightSideTemplate"></ng-template>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box content -->
+  <div class="container box-content">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<!-- Default left side template-->
+<ng-template #defaultLeftSideTemplate>
+</ng-template>
+
+<!--Default title template-->
+<ng-template #defaultMiddleTemplate>
+</ng-template>
+
+<!--Default right side template-->
+<ng-template #defaultRightSideTemplate>
+</ng-template>

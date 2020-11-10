@@ -1,0 +1,81 @@
+//#region Mobiles
+
+// Media query for small mobile only (iPhone 5/5S).
+@mixin media-breakpoint-small-mobile() {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
+    @content;
+  }
+}
+
+// Media query for mobile and smaller device resolution.
+@mixin media-breakpoint-mobile-down() {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+// Media query for mobile device resolution.
+@mixin media-breakpoint-mobile() {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+// Media query for mobile and larger device resolution.
+@mixin media-breakpoint-mobile-up() {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+//#endregion
+
+//#region Tablets
+
+// Media query for tablet device resolution
+@mixin media-breakpoint-tablet() {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+// Media query for tablet device and larger ones resolution.
+@mixin media-breakpoint-tablet-up() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Media query for tablet device and smaller ones resolution.
+@mixin media-breakpoint-tablet-down() {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+//#endregion
+
+//#region Desktop
+
+// Media query for screens which are smaller than desktop resolution.
+@mixin media-breakpoint-desktop-down() {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+// Media query for desktop resolution.
+@mixin media-breakpoint-desktop() {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+// Media query for desktop and larger screen.
+@mixin media-breakpoint-desktop-up() {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+//#endregion

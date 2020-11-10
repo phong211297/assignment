@@ -1,0 +1,39 @@
+@import '../../../../styles/variables/color.scss';
+@import '../../../../styles/mixins//breakpoints.scss';
+
+.box-heading__container {
+  background-color: $primary-color-heading-panel;
+  width: 100%;
+
+  .box-heading__inner {
+    color: $primary-color-white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      overflow: hidden;
+    }
+
+    .middle {
+      display: flex;
+      justify-content: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      overflow: hidden;
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+  }
+}
+
+.box-content {
+  background-color: $primary-color-white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

@@ -1,0 +1,43 @@
+@import '../../../../styles/variables/color.scss';
+@import '../../../../styles/mixins//breakpoints.scss';
+
+.mat-toolbar {
+  background-color: $primary-color-white;
+  border-bottom: 2px solid $primary-color-orange;
+
+  .navigation-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .left {
+      overflow: hidden;
+    }
+
+    .middle {
+      display: flex;
+      justify-content: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      overflow: hidden;
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+  }
+}
+
+.logo__image {
+  height: 30px;
+}
+
+@include media-breakpoint-tablet-up() {
+  .mat-toolbar {
+    .navigation-bar {
+      padding: 0 45px;
+    }
+  }
+}

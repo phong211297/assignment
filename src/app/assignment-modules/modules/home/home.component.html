@@ -1,0 +1,24 @@
+<app-home-layout>
+  <app-box-layout sub [left-side-template]="subLeftSide" [middle-template]="subMiddleSide">
+    <app-transfer-form></app-transfer-form>
+  </app-box-layout>
+  <app-box-layout main [left-side-template]="mainLeftSide" [middle-template]="mainMiddleSide"></app-box-layout>
+</app-home-layout>
+
+<!-- Main heading template ref -->
+<ng-template #mainMiddleSide>
+  <h4 class="main-heading-panel">Recent Transactions</h4>
+</ng-template>
+
+<ng-template #mainLeftSide>
+  <img src="../../../../assets/images/icons/briefcase.png" />
+</ng-template>
+
+<!-- Sub heading template ref -->
+<ng-template #subLeftSide>
+  <img src="../../../../assets/images/icons/arrows.png" />
+</ng-template>
+
+<ng-template #subMiddleSide>
+  <h4 class="sub-heading-panel">Make a transfer</h4>
+</ng-template>

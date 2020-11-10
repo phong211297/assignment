@@ -1,0 +1,17 @@
+@import '../../../../styles/variables/color.scss';
+
+.page-wrapper {
+  background-color: $primary-color-page-wrap;
+  height: 100%;
+
+  .page-wrapper__content-wrapper {
+    max-width: 1140px;
+    margin: auto;
+    height: 100%;
+    background-color: $primary-color-white;
+
+    .page-wrapper__content-wrapper__content {
+      height: calc(100% - 64px);
+    }
+  }
+}

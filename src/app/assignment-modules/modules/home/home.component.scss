@@ -1,0 +1,19 @@
+img {
+  mix-blend-mode: multiply;
+  width: 20px;
+  height: 20px;
+}
+
+h4 {
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 14px;
+
+  &.sub-heading-panel {
+    margin: 5px 0;
+  }
+
+  &.main-heading-panel {
+    margin: 10px 0;
+  }
+}

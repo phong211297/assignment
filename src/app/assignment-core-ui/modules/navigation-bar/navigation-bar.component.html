@@ -1,0 +1,33 @@
+<!-- Navigation main section -->
+<mat-toolbar>
+    <nav class="container navigation-bar">
+        <!--Left side-->
+        <div class="left">
+            <ng-template [ngTemplateOutlet]="getSectionTemplate('left') || defaultLeftSideTemplate"
+                [ngTemplateOutletContext]="{clickGoBack: clickGoBack.bind(this)}">
+            </ng-template>
+        </div>
+
+        <!--Middle-->
+        <div class="middle">
+            <ng-template [ngTemplateOutlet]="getSectionTemplate('middle') || defaultMiddleTemplate"></ng-template>
+        </div>
+
+        <!--Right side-->
+        <div class="right">
+            <ng-template [ngTemplateOutlet]="getSectionTemplate('right') || defaultRightSideTemplate"></ng-template>
+        </div>
+    </nav>
+</mat-toolbar>
+
+<!-- Default left side template-->
+<ng-template #defaultLeftSideTemplate let-clickGoBack="clickGoBack">
+    <img class="logo__image" (click)="clickGoBack()" src="../../../../assets/images/logo/logo.jpg" />
+</ng-template>
+
+<!--Default title template-->
+<ng-template #defaultMiddleTemplate>
+</ng-template>
+
+<!--Default right side template-->
+<ng-template #defaultRightSideTemplate></ng-template>

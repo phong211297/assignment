@@ -1,0 +1,56 @@
+@import '../../../../styles/variables/color.scss';
+@import '../../../../styles/mixins//breakpoints.scss';
+
+.home-background {
+  height: 100%;
+  background-image: url('../../../../assets/images/background/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .home-container {
+    height: 100%;
+    padding: 0 16px;
+
+    .home-container__content-wrapper {
+      margin: 0px;
+      height: 100%;
+      padding: 50px 0 40px;
+      display: flex;
+      .home-container__content-wrapper--sub-content {
+        height: 100%;
+      }
+
+      .home-container__content-wrapper--main-content {
+        height: 100%;
+      }
+    }
+  }
+}
+@include media-breakpoint-tablet() {
+  .home-background {
+    .home-container {
+      .home-container__content-wrapper {
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-tablet-up() {
+  .home-background {
+    .home-container {
+      padding: 0 61px;
+
+      .home-container__content-wrapper {
+        .home-container__content-wrapper--sub-content {
+          padding-left: 0px;
+        }
+
+        .home-container__content-wrapper--main-content {
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+}
