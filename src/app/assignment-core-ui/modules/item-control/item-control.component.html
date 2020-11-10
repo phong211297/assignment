@@ -1,0 +1,16 @@
+<div class="item">
+  <div class="item-status">
+    
+  </div>
+  <div class="item-head" *ngIf="hasItemPartTemplateRef('head')">
+    <ng-template [ngTemplateOutlet]="loadItemPartTemplateRef('head')"></ng-template>
+  </div>
+
+  <div class="item-body" *ngIf="hasItemPartTemplateRef('body')">
+    <ng-template [ngTemplateOutlet]="loadItemPartTemplateRef('body')"></ng-template>
+  </div>
+
+  <div class="item-tail" *ngIf="hasItemPartTemplateRef('tail')">
+    <ng-template [ngTemplateOutlet]="loadItemPartTemplateRef('tail')"></ng-template>
+  </div>
+</div>

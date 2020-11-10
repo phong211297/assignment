@@ -1,3 +1,5 @@
+@import '../../../../styles/mixins/breakpoints.scss';
+
 img {
   mix-blend-mode: multiply;
   width: 20px;
@@ -15,5 +17,31 @@ h4 {
 
   &.main-heading-panel {
     margin: 10px 0;
+  }
+}
+
+.controller-wrapper {
+  margin-bottom: 15px;
+}
+
+.item-list {
+  max-height: 400px;
+  overflow: auto;
+}
+
+@include media-breakpoint-large-desktop-up() {
+  .sort-container {
+    padding-left: 0px;
+  }
+}
+
+@include media-breakpoint-medium-height() {
+  .item-list {
+    max-height: 500px;
+  }
+}
+@include media-breakpoint-larger-height() {
+  .item-list {
+    max-height: 60vh;
   }
 }

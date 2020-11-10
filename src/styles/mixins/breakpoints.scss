@@ -78,4 +78,32 @@
   }
 }
 
+// Media query for desktop and larger screen.
+@mixin media-breakpoint-large-desktop-up() {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
 //#endregion
+
+//#region Height
+// Media query for screens which are smaller than desktop resolution.
+@mixin media-breakpoint-small-height() {
+  @media (max-height: 600px) {
+    @content;
+  }
+}
+
+// Media query for desktop resolution.
+@mixin media-breakpoint-medium-height() {
+  @media (min-width: 601px) and (max-width: 900px) {
+    @content;
+  }
+}
+
+// Media query for desktop and larger screen.
+@mixin media-breakpoint-larger-height() {
+  @media (min-width: 901px) {
+    @content;
+  }
+}

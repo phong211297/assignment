@@ -4,6 +4,7 @@ import { NavigationBarModule } from './modules/navigation-bar/navigation-bar.mod
 import { PrimaryLayoutModule } from './modules/primary-layout/primary-layout.module';
 import { HomeLayoutModule } from './modules/home-layout/home-layout.module';
 import { BoxLayoutModule } from './modules/box-layout/box-layout.module';
+import { ItemControlModule } from './modules/item-control/item-control.module';
 
 @NgModule({
   declarations: [],
@@ -13,12 +14,14 @@ import { BoxLayoutModule } from './modules/box-layout/box-layout.module';
     PrimaryLayoutModule,
     HomeLayoutModule,
     BoxLayoutModule,
+    ItemControlModule
   ],
   exports: [
     NavigationBarModule,
     PrimaryLayoutModule,
     HomeLayoutModule,
     BoxLayoutModule,
+    ItemControlModule
   ],
 })
-export class AssignmentsCoreUiModule {}
+export class AssignmentsCoreUiModule { }

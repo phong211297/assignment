@@ -1,0 +1,21 @@
+<div class="sort-container">
+
+    <!-- Sort container label -->
+    <div class="sort-container__label">
+        <p>Sort by</p>
+    </div>
+
+    <!-- Sort container controller -->
+    <div class="sort-container__controller">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-menu #aboveMenu="matMenu" yPosition="above">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+            <mat-button-toggle value="bold" [matMenuTriggerFor]="aboveMenu">Date <mat-icon>arrow_drop_down</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value="italic">Beneficiary</mat-button-toggle>
+            <mat-button-toggle value="underline">Amount</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+</div>

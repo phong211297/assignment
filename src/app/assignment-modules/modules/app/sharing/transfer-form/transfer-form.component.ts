@@ -13,13 +13,13 @@ export class TransferFormComponent implements OnInit {
   public transferForm: FormGroup;
 
   // From account controller
-  public fromAccountController = new FormControl('', [Validators.required]);
+  public fromAccountController = new FormControl('Free Checking(4692) - $5824.76', [Validators.required]);
 
   // To account controller
-  public toAccountController = new FormControl('', [Validators.required]);
+  public toAccountController = new FormControl('Georgia Power Electric Company', [Validators.required]);
 
   // Amount controller
-  public amountController = new FormControl('', [Validators.required]);
+  public amountController = new FormControl('0.00', [Validators.required]);
 
   //#endregion
 
@@ -37,7 +37,11 @@ export class TransferFormComponent implements OnInit {
 
   //#region Methods
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void { }
 
+  // On form submit
+  public onSubmit(): void {
+    console.log(this.transferForm.value);
+  }
   //#endregion
 }

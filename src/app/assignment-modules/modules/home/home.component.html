@@ -1,8 +1,33 @@
 <app-home-layout>
+
+  <!-- Sub content modal -->
   <app-box-layout sub [left-side-template]="subLeftSide" [middle-template]="subMiddleSide">
     <app-transfer-form></app-transfer-form>
   </app-box-layout>
-  <app-box-layout main [left-side-template]="mainLeftSide" [middle-template]="mainMiddleSide"></app-box-layout>
+
+  <!-- Main content modal -->
+  <app-box-layout main [left-side-template]="mainLeftSide" [middle-template]="mainMiddleSide">
+
+    <!-- Search + sort controller list management -->
+    <div class="controller-wrapper row">
+
+      <!-- Search controller -->
+      <div class="col-12 col-xl-6">
+        <app-search-controller></app-search-controller>
+      </div>
+
+      <!-- Sort controller -->
+      <div class="sort-container col-12 col-xl-6">
+        <app-sort-controller></app-sort-controller>
+      </div>
+    </div>
+
+    <!-- Item list  -->
+    <div class="item-list">
+      <app-item-list></app-item-list>
+    </div>
+  </app-box-layout>
+
 </app-home-layout>
 
 <!-- Main heading template ref -->
@@ -20,5 +45,5 @@
 </ng-template>
 
 <ng-template #subMiddleSide>
-  <h4 class="sub-heading-panel">Make a transfer</h4>
+  <h4 class="sub-heading-panel">Make a Transfer</h4>
 </ng-template>

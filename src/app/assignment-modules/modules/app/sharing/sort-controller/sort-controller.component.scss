@@ -1,0 +1,28 @@
+@import '../../../../../../styles/mixins/breakpoints.scss';
+
+.sort-container {
+  display: flex;
+
+  .sort-container__label {
+    padding-right: 15px;
+    align-self: center;
+
+    p {
+      margin: 0px;
+      font-weight: 500;
+    }
+  }
+}
+
+:host
+  ::ng-deep
+  .mat-button-toggle-appearance-standard
+  .mat-button-toggle-label-content {
+  line-height: 40px;
+  padding: 0 12px;
+  text-transform: uppercase;
+
+  mat-icon {
+      width: 14px;
+  }
+}

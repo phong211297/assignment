@@ -1,23 +1,22 @@
-<form [formGroup]="transferForm">
+<form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
 
   <!-- From account field -->
   <label for="fromAccountInput">From account</label>
   <mat-form-field floatLabel="never">
-    <input id="fromAccountInput" placeholder="pat@example.com" matInput value="pat@example.com"
-      [formControl]="fromAccountController">
+    <input id="fromAccountInput" matInput [formControl]="fromAccountController">
   </mat-form-field>
 
   <!-- To account field  -->
   <label for="toAccountInput">To account</label>
   <mat-form-field floatLabel="never">
-    <input id="toAccountInput" matInput placeholder="pat@example.com" [formControl]="toAccountController">
+    <input id="toAccountInput" matInput [formControl]="toAccountController">
   </mat-form-field>
 
   <!-- Amount input field -->
   <label for="amountInput">Amount</label>
   <mat-form-field floatLabel="never">
     <mat-icon matPrefix>attach_money</mat-icon>
-    <input id="amountInput" matInput placeholder="0.00" [formControl]="amountController">
+    <input id="amountInput" matInput [formControl]="amountController">
   </mat-form-field>
 
   <!-- Submit button -->

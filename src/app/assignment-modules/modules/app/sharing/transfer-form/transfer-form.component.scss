@@ -11,9 +11,17 @@ label {
 
 mat-form-field {
   width: 100%;
+
+  input {
+    color: #6c757d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .btn-submit {
+  margin-top: 25px;
   display: block;
   margin-left: auto;
   width: 70%;
@@ -27,7 +35,5 @@ mat-form-field {
 }
 
 :host ::ng-deep mat-icon {
-  width: 14px !important;
-  height: 14px;
   font-size: 14px !important;
 }
