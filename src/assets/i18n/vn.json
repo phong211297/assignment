@@ -1,0 +1,31 @@
+{
+  "HOME": {
+    "TITLE_MAKE_A_TRANSFER": "Tạo giao dịch mới",
+    "TITLE_RECENT_TRANSACTIONS": "Giao dịch gần đây"
+  },
+  "TRANSFER_FORM": {
+    "TITLE_FROM_ACCOUNT":"Người gửi",
+    "TITLE_TO_ACCOUNT": "Người nhận",
+    "TITLE_AMOUNT": "Số tiền",
+    "TITLE_SUBMIT": "Gửi"
+  },
+  "CONFIRM_DIALOG": {
+    "TITLE_CONFIRM_TRANSFER?": "Đồng ý giao dịch ?",
+    "TITLE_FROM_ACCOUNT": "Người gửi : {{account}}",
+    "TITLE_TO_ACCOUNT": "Người nhận : {{account}}",
+    "TITLE_AMOUNT": "Số tiền : {{amount}}",
+    "TITLE_CONFIRM": "Đồng ý",
+    "TITLE_CANCLE": "Hủy bỏ"
+  },
+  "SORT_CONTROLLER": {
+    "TITLE_DATE": "Ngày",
+    "TITLE_OLDER": "Cũ nhất",
+    "TITLE_NEWER": "Mới nhất",
+    "TITLE_BENEFICIARY":"Tên A->Z",
+    "TITLE_AMOUNT":"Số tiền",
+    "TITLE_SORT_BY":"Sắp xếp"
+  },
+  "SEARCH_CONTROLLER": {
+    "SEARCH_PLACEHOLDER": "Tìm kiếm..."
+  }
+}

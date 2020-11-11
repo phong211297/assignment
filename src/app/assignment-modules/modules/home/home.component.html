@@ -13,18 +13,18 @@
 
       <!-- Search controller -->
       <div class="col-12 col-xl-6">
-        <app-search-controller></app-search-controller>
+        <app-search-controller (keyWordEmit)="searchTransactionsList($event)"></app-search-controller>
       </div>
 
       <!-- Sort controller -->
       <div class="sort-container col-12 col-xl-6">
-        <app-sort-controller></app-sort-controller>
+        <app-sort-controller (keyWordEmit)="sortTransactionList($event)"></app-sort-controller>
       </div>
     </div>
 
     <!-- Item list  -->
     <div class="item-list">
-      <app-item-list></app-item-list>
+      <app-item-list [transactions]="transactions"></app-item-list>
     </div>
   </app-box-layout>
 
@@ -32,7 +32,7 @@
 
 <!-- Main heading template ref -->
 <ng-template #mainMiddleSide>
-  <h4 class="main-heading-panel">Recent Transactions</h4>
+  <h4 class="main-heading-panel font-light">{{"HOME.TITLE_RECENT_TRANSACTIONS" | translate}}</h4>
 </ng-template>
 
 <ng-template #mainLeftSide>
@@ -45,5 +45,5 @@
 </ng-template>
 
 <ng-template #subMiddleSide>
-  <h4 class="sub-heading-panel">Make a Transfer</h4>
+  <h4 class="sub-heading-panel font-light">{{ "HOME.TITLE_MAKE_A_TRANSFER" | translate}}</h4>
 </ng-template>

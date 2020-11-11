@@ -54,3 +54,9 @@
     }
   }
 }
+
+@include media-breakpoint-mobile-down() {
+  .home-container__content-wrapper--sub-content {
+    margin-bottom: 30px;
+  }
+}

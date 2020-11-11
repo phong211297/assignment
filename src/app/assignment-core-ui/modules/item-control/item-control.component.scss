@@ -11,8 +11,9 @@
 }
 
 .item .item-status {
-  width: 10px;
+  width: 8px;
   background-color: green;
+  flex: 0 0 auto;
 }
 
 .item .item-head,
@@ -26,6 +27,7 @@
 }
 
 .item .item-tail {
+  flex: 0 0 15%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -59,13 +61,19 @@
   }
 }
 
+@include media-breakpoint-mobile-down() {
+  .item {
+    overflow-x: auto;
+  }
+}
+
 .default {
   display: flex;
   padding: 20px;
 }
 
 *:focus {
-  outline:none !important;
+  outline: none !important;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;

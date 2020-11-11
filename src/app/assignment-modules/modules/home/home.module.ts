@@ -5,6 +5,8 @@ import { AssignmentsCoreUiModule } from 'src/app/assignment-core-ui/assignments-
 import { HomeComponent } from './home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SharingModule } from '../app/sharing/sharing.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateSharedLazyModule } from '../translate-shared-lazy/translate-shared-lazy.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -14,6 +16,7 @@ import { SharingModule } from '../app/sharing/sharing.module';
     AssignmentsCoreUiModule,
     MatIconModule,
     SharingModule,
+    TranslateSharedLazyModule,
   ],
 })
 export class HomeModule {}

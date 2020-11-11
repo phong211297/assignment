@@ -1,0 +1,31 @@
+{
+  "HOME": {
+    "TITLE_MAKE_A_TRANSFER": "Make a Transfer",
+    "TITLE_RECENT_TRANSACTIONS": "Recent Transactions"
+  },
+  "TRANSFER_FORM": {
+    "TITLE_FROM_ACCOUNT":"From account",
+    "TITLE_TO_ACCOUNT": "To account",
+    "TITLE_AMOUNT": "Amount",
+    "TITLE_SUBMIT": "Submit"
+  },
+  "CONFIRM_DIALOG": {
+    "TITLE_CONFIRM_TRANSFER?": "Confirm to transfer ?",
+    "TITLE_FROM_ACCOUNT": "From account : {{account}}",
+    "TITLE_TO_ACCOUNT": "To account : {{account}}",
+    "TITLE_AMOUNT": "Amount : {{amount}}",
+    "TITLE_CONFIRM": "Confirm",
+    "TITLE_CANCLE": "Cancel"
+  },
+  "SORT_CONTROLLER": {
+    "TITLE_DATE": "Date",
+    "TITLE_OLDER": "Older",
+    "TITLE_NEWER": "Newer",
+    "TITLE_BENEFICIARY":"Beneficiary",
+    "TITLE_AMOUNT":"Amount",
+    "TITLE_SORT_BY":"Sort by"
+  },
+  "SEARCH_CONTROLLER": {
+    "SEARCH_PLACEHOLDER": "Search by typing..."
+  }
+}

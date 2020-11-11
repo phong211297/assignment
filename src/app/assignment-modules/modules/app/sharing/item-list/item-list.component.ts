@@ -1,17 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Transaction } from 'src/app/assignment-api/models/response/transaction.model';
 
 @Component({
   selector: 'app-item-list',
   templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.scss']
+  styleUrls: ['./item-list.component.scss'],
 })
-export class ItemListComponent implements OnInit {
+export class ItemListComponent implements OnInit, OnChanges {
+  //#region Properties
 
-  public arr = [1, 23, 3, 2, 32, 3, 23, 23, 2, 32, 3, 23, 2, 3];
+  // Input transactions list
+  @Input('transactions')
+  public transactions: Transaction[];
 
-  constructor() { }
+  //#endregion
 
-  ngOnInit(): void {
-  }
+  //#region Constructor
+  public constructor() {}
 
+  //#endregion
+
+  //#region Methods
+
+  // Trigger when component inits
+  public ngOnInit(): void {}
+
+  public ngOnChanges(): void {}
+  //#endregion
 }

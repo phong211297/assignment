@@ -1,24 +1,49 @@
 <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
 
   <!-- From account field -->
-  <label for="fromAccountInput">From account</label>
-  <mat-form-field floatLabel="never">
+  <label for="fromAccountInput">{{ "TRANSFER_FORM.TITLE_FROM_ACCOUNT" | translate}}</label>
+  <mat-form-field class="font-light" floatLabel="never">
     <input id="fromAccountInput" matInput [formControl]="fromAccountController">
   </mat-form-field>
 
   <!-- To account field  -->
-  <label for="toAccountInput">To account</label>
-  <mat-form-field floatLabel="never">
+  <label for="toAccountInput">{{ "TRANSFER_FORM.TITLE_TO_ACCOUNT" | translate}}</label>
+  <mat-form-field class="font-light" floatLabel="never">
     <input id="toAccountInput" matInput [formControl]="toAccountController">
+    <mat-error *ngIf="toAccountController.invalid">This field is required !</mat-error>
   </mat-form-field>
 
   <!-- Amount input field -->
-  <label for="amountInput">Amount</label>
-  <mat-form-field floatLabel="never">
+  <label for="amountInput">{{"TRANSFER_FORM.TITLE_AMOUNT" | translate}}</label>
+  <mat-form-field class="font-light" floatLabel="never">
     <mat-icon matPrefix>attach_money</mat-icon>
-    <input id="amountInput" matInput [formControl]="amountController">
+    <input type="number" id="amountInput" matInput [formControl]="amountController">
+    <mat-error *ngIf="amountController.invalid">{{getAmountErrorMessage()}}</mat-error>
   </mat-form-field>
 
   <!-- Submit button -->
-  <button class="btn-submit" type="submit">Submit</button>
+  <button class="btn-submit" type="submit"
+    [disabled]="!this.transferForm || this.transferForm.invalid">{{"TRANSFER_FORM.TITLE_SUBMIT" | translate}}</button>
 </form>
+
+<ng-template #confirmDialog>
+
+  <!-- Dialog title section -->
+  <div class="dialog-title text-center">
+    <h1>{{ "CONFIRM_DIALOG.TITLE_CONFIRM_TRANSFER?" | translate}}</h1>
+  </div>
+
+  <!-- Dialog content section  -->
+  <div class="dialog-content">
+    <p>{{ "CONFIRM_DIALOG.TITLE_FROM_ACCOUNT" | translate : {account : fromAccountController.value} }}</p>
+    <p>{{"CONFIRM_DIALOG.TITLE_TO_ACCOUNT" | translate : {account : toAccountController.value} }} </p>
+    <p>{{"CONFIRM_DIALOG.TITLE_AMOUNT" | translate : {amount : amountController.value} }} </p>
+  </div>
+
+  <!-- Dialog button group section-->
+  <div class="button-group">
+    <button mat-raised-button [mat-dialog-close]>{{"CONFIRM_DIALOG.TITLE_CANCLE" | translate}}</button>
+    <button mat-raised-button (click)="confirmTransfer()">{{"CONFIRM_DIALOG.TITLE_CONFIRM" | translate}}</button>
+  </div>
+
+</ng-template>

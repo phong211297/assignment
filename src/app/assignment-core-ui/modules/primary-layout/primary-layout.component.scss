@@ -1,4 +1,5 @@
 @import '../../../../styles/variables/color.scss';
+@import '../../../../styles/mixins/breakpoints.scss';
 
 .page-wrapper {
   background-color: $primary-color-page-wrap;
@@ -12,6 +13,16 @@
 
     .page-wrapper__content-wrapper__content {
       height: calc(100% - 64px);
+    }
+  }
+}
+
+@include media-breakpoint-tablet-down() {
+  .page-wrapper {
+    .page-wrapper__content-wrapper {
+      .page-wrapper__content-wrapper__content {
+        height: auto;
+      }
     }
   }
 }

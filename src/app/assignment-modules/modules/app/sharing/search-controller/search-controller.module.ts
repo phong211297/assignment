@@ -5,11 +5,11 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { SearchControllerComponent } from './search-controller.component';
+import { MatButtonModule } from '@angular/material/button';
+import { TranslateSharedLazyModule } from '../../../translate-shared-lazy/translate-shared-lazy.module';
 
 @NgModule({
-  declarations: [
-    SearchControllerComponent
-  ],
+  declarations: [SearchControllerComponent],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -17,7 +17,9 @@ import { SearchControllerComponent } from './search-controller.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatButtonModule,
+    TranslateSharedLazyModule,
   ],
-  exports: [SearchControllerComponent]
+  exports: [SearchControllerComponent],
 })
-export class SearchControllerModule { }
+export class SearchControllerModule {}

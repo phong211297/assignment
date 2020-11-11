@@ -1,4 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'PrimaryFont';
+  src: url('./assets/fonts/Kanit-Regular.ttf') format('truetype'),
+    url('./assets/fonts/Kanit-Light.ttf') format('truetype');
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+  font-family: 'PrimaryFontLight';
+  src: url('./assets/fonts/Kanit-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PrimaryFontMedium';
+  src: url('./assets/fonts/Kanit-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PrimaryFontSemiBold';
+  src: url('./assets/fonts/Kanit-SemiBold.ttf') format('truetype');
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'PrimaryFont', Roboto, 'Helvetica Neue', sans-serif !important;
+}
+
+.font-light {
+  font-family: 'PrimaryFontLight', Roboto, 'Helvetica Neue', sans-serif !important;
+}
+
+.font-medium {
+  font-family: 'PrimaryFontMedium', Roboto, 'Helvetica Neue', sans-serif !important;
+}
+
+.font-semibold {
+  font-family: 'PrimaryFontSemiBold', Roboto, 'Helvetica Neue', sans-serif !important;
+}

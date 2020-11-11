@@ -4,7 +4,9 @@ import { SortControllerComponent } from './sort-controller.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatButtonModule } from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateSharedLazyModule } from '../../../translate-shared-lazy/translate-shared-lazy.module';
 
 @NgModule({
   declarations: [SortControllerComponent],
@@ -13,8 +15,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatButtonToggleModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    TranslateSharedLazyModule,
   ],
-  exports: [SortControllerComponent]
+  exports: [SortControllerComponent],
 })
-export class SortControllerModule { }
+export class SortControllerModule {}

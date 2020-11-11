@@ -5,6 +5,10 @@ import { MatInputModule } from '@angular/material/input';
 import { TransferFormComponent } from './transfer-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateSharedLazyModule } from '../../../translate-shared-lazy/translate-shared-lazy.module';
 
 @NgModule({
   imports: [
@@ -14,6 +18,9 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatDialogModule,
+    MatButtonModule,
+    TranslateSharedLazyModule,
   ],
   declarations: [TransferFormComponent],
   exports: [
@@ -21,6 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     ReactiveFormsModule,
     TransferFormComponent,
+    TranslateModule,
   ],
 })
 export class TransferFormModule {}

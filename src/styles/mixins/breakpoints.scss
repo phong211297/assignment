@@ -6,6 +6,11 @@
     @content;
   }
 }
+@mixin media-breakpoint-small-mobile-down() {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
 
 // Media query for mobile and smaller device resolution.
 @mixin media-breakpoint-mobile-down() {
@@ -48,7 +53,7 @@
 
 // Media query for tablet device and smaller ones resolution.
 @mixin media-breakpoint-tablet-down() {
-  @media (max-width: 991.98px) {
+  @media (max-width: 767px) {
     @content;
   }
 }

@@ -1,3 +1,6 @@
+@import '../../../../../../styles/variables/font-weight.scss';
+@import '../../../../../../styles/mixins/breakpoints.scss';
+
 .item-heading {
   display: flex;
   align-items: center;
@@ -25,4 +28,13 @@
 
 .item-price {
   padding-right: 12px;
+  font-weight: $text-600;
+  text-align: right;
+}
+
+@include media-breakpoint-tablet-up() {
+  h4,
+  p {
+    word-break: break-word;
+  }
 }

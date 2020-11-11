@@ -1,6 +1,7 @@
 @import '../../../../../../styles/mixins/breakpoints.scss';
 
 .sort-container {
+  margin: 0px;
   display: flex;
 
   .sort-container__label {
@@ -23,6 +24,34 @@
   text-transform: uppercase;
 
   mat-icon {
-      width: 14px;
+    width: 14px;
+  }
+}
+
+@include media-breakpoint-mobile-down() {
+  .sort-container {
+    display: block;
+  }
+
+  .sort-container__label {
+    margin-bottom: 15px;
+  }
+}
+
+@include media-breakpoint-small-mobile-down() {
+  * {
+    font-size: 12px;
+  }
+
+  mat-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  :host
+    ::ng-deep
+    .mat-button-toggle-appearance-standard
+    .mat-button-toggle-label-content {
+    padding: 0 8px;
   }
 }
