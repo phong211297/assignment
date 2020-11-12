@@ -7,19 +7,23 @@
 
     <!-- Sort container controller -->
     <div class="sort-container__controller">
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" (change)="triggerSortEvent($event.value)">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="category"
+            (change)="handleCategoryChange($event)" multiple>
             <mat-menu #aboveMenu="matMenu" yPosition="above">
-                <mat-button-toggle value="dateNew" class="font-medium">{{"SORT_CONTROLLER.TITLE_NEWER" | translate}}
-                </mat-button-toggle>
-                <mat-button-toggle value="dateOld" class="font-medium">{{"SORT_CONTROLLER.TITLE_OLDER" |translate}}
-                </mat-button-toggle>
+                <mat-button-toggle-group class="inner-btn-group" [(ngModel)]="type" (change)="handleTypeChange($event)"
+                    vertical="true" multiple>
+                    <mat-button-toggle value="new" class="font-medium">{{"SORT_CONTROLLER.TITLE_NEWER" | translate}}
+                    </mat-button-toggle>
+                    <mat-button-toggle value="old" class="font-medium">{{"SORT_CONTROLLER.TITLE_OLDER" |translate}}
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
             </mat-menu>
             <mat-button-toggle class="font-medium" [matMenuTriggerFor]="aboveMenu">
                 {{"SORT_CONTROLLER.TITLE_DATE" | translate}}
                 <mat-icon>arrow_drop_down
                 </mat-icon>
             </mat-button-toggle>
-            <mat-button-toggle class="font-medium" value="beneficiary">
+            <mat-button-toggle class="font-medium" value="beneficiary" uncheck="true">
                 {{"SORT_CONTROLLER.TITLE_BENEFICIARY" | translate}}</mat-button-toggle>
             <mat-button-toggle class="font-medium" value="amount">{{"SORT_CONTROLLER.TITLE_AMOUNT" | translate}}
             </mat-button-toggle>

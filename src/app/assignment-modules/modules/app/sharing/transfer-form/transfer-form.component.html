@@ -9,7 +9,8 @@
   <!-- To account field  -->
   <label for="toAccountInput">{{ "TRANSFER_FORM.TITLE_TO_ACCOUNT" | translate}}</label>
   <mat-form-field class="font-light" floatLabel="never">
-    <input id="toAccountInput" matInput [formControl]="toAccountController">
+    <input id="toAccountInput" matInput [formControl]="toAccountController"
+      placeholder="Georgia Power Electric Company">
     <mat-error *ngIf="toAccountController.invalid">This field is required !</mat-error>
   </mat-form-field>
 
@@ -17,7 +18,7 @@
   <label for="amountInput">{{"TRANSFER_FORM.TITLE_AMOUNT" | translate}}</label>
   <mat-form-field class="font-light" floatLabel="never">
     <mat-icon matPrefix>attach_money</mat-icon>
-    <input type="number" id="amountInput" matInput [formControl]="amountController">
+    <input type="number" id="amountInput" matInput [formControl]="amountController" placeholder="0.00">
     <mat-error *ngIf="amountController.invalid">{{getAmountErrorMessage()}}</mat-error>
   </mat-form-field>
 

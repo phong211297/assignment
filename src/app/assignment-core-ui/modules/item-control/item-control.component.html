@@ -1,5 +1,5 @@
 <div class="item">
-  <div class="item-status">
+  <div class="item-status" [style.backgroundColor]=" itemStatus || 'green'">
   </div>
   <div class="item-head" *ngIf="hasItemPartTemplateRef('head')">
     <ng-template [ngTemplateOutlet]="loadItemPartTemplateRef('head')"></ng-template>

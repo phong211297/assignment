@@ -15,17 +15,20 @@
   }
 }
 
-:host
-  ::ng-deep
-  .mat-button-toggle-appearance-standard
-  .mat-button-toggle-label-content {
-  line-height: 40px;
-  padding: 0 12px;
-  text-transform: uppercase;
+:host ::ng-deep {
+  .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 40px;
+    padding: 0 12px;
+    text-transform: uppercase;
 
-  mat-icon {
-    width: 14px;
+    mat-icon {
+      width: 14px;
+    }
   }
+}
+.mat-button-toggle-group.inner-btn-group {
+  border: none;
+  width: 100%;
 }
 
 @include media-breakpoint-mobile-down() {

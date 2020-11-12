@@ -19,8 +19,8 @@
   },
   "SORT_CONTROLLER": {
     "TITLE_DATE": "Date",
-    "TITLE_OLDER": "Older",
-    "TITLE_NEWER": "Newer",
+    "TITLE_OLDER": "Increase",
+    "TITLE_NEWER": "Decrease",
     "TITLE_BENEFICIARY":"Beneficiary",
     "TITLE_AMOUNT":"Amount",
     "TITLE_SORT_BY":"Sort by"

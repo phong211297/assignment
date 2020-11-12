@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateSharedLazyModule } from '../../../translate-shared-lazy/translate-shared-lazy.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SortControllerComponent],
@@ -17,6 +18,7 @@ import { TranslateSharedLazyModule } from '../../../translate-shared-lazy/transl
     MatButtonModule,
     MatMenuModule,
     TranslateSharedLazyModule,
+    FormsModule,
   ],
   exports: [SortControllerComponent],
 })

@@ -19,8 +19,8 @@
   },
   "SORT_CONTROLLER": {
     "TITLE_DATE": "Ngày",
-    "TITLE_OLDER": "Cũ nhất",
-    "TITLE_NEWER": "Mới nhất",
+    "TITLE_OLDER": "Tăng dần",
+    "TITLE_NEWER": "Giảm dần",
     "TITLE_BENEFICIARY":"Tên A->Z",
     "TITLE_AMOUNT":"Số tiền",
     "TITLE_SORT_BY":"Sắp xếp"

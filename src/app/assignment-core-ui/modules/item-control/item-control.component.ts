@@ -1,5 +1,13 @@
-import {Component, ContentChildren, HostBinding, Input, OnInit, QueryList, TemplateRef} from '@angular/core';
-import {ItemControlPartDirective} from './item-control-part.directive';
+import {
+  Component,
+  ContentChildren,
+  HostBinding,
+  Input,
+  OnInit,
+  QueryList,
+  TemplateRef,
+} from '@angular/core';
+import { ItemControlPartDirective } from './item-control-part.directive';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -8,7 +16,6 @@ import {ItemControlPartDirective} from './item-control-part.directive';
   styleUrls: ['./item-control.component.scss'],
 })
 export class ItemControlComponent implements OnInit {
-
   //#region  Properties
 
   // Class to be applied to host item.
@@ -35,6 +42,9 @@ export class ItemControlComponent implements OnInit {
   @Input()
   public hasRipple = false;
 
+  @Input('item-status')
+  public itemStatus: string;
+
   //#endregion
 
   //#region Accessors
@@ -58,18 +68,15 @@ export class ItemControlComponent implements OnInit {
 
   //#region Methods
 
-  public ngOnInit(): void {
-  }
+  public ngOnInit(): void {}
 
   // Load item template reference by using name.
   public loadItemPartTemplateRef(name: string): TemplateRef<any> {
-
     if (!this.sections || !this.sections.length) {
       return null;
     }
 
-    const section = this.sections
-      .find(item => item.name === name);
+    const section = this.sections.find((item) => item.name === name);
 
     if (!section) {
       return null;

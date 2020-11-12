@@ -25,6 +25,12 @@ export class SortControllerComponent implements OnInit, OnDestroy {
   // Button group subject handle
   private buttonGroupSubject: Subject<string> = new Subject();
 
+  // Category field
+  public category: string[];
+
+  // Type field
+  public type = ['new'];
+
   //#endregion
 
   //#region Constructor
@@ -40,8 +46,8 @@ export class SortControllerComponent implements OnInit, OnDestroy {
     const handleButtonGroupBehaviorSubscription = this.buttonGroupSubject
       .pipe(
         distinctUntilChanged(),
-        tap((keyword: string) => {
-          this.keyWordEmit.emit(keyword);
+        tap((keywords: string) => {
+          this.keyWordEmit.emit(keywords);
         })
       )
       .subscribe();
@@ -50,12 +56,46 @@ export class SortControllerComponent implements OnInit, OnDestroy {
   }
 
   // Trigger sort event
-  public triggerSortEvent(keyword: SORT_KEYWORD_SECTIONS): void {
-    if (!keyword) {
+  public handleTypeChange(event: any): void {
+    if (!event || !event.source) {
+      this.buttonGroupSubject.next(null);
+      return;
+    }
+    const toggleRef = event.source;
+
+    if (this.type.length > 0 && this.type === toggleRef.value) {
       return;
     }
 
-    this.buttonGroupSubject.next(keyword);
+    if (event.value.some((item) => item === toggleRef.value)) {
+      this.category = [toggleRef.value];
+      this.type = [toggleRef.value];
+    }
+
+    const requestValue = `${this.category}`;
+    this.buttonGroupSubject.next(requestValue);
+    return;
+  }
+
+  // Category handle changing
+  public handleCategoryChange(event: any): void {
+    if (!event || !event.source) {
+      this.buttonGroupSubject.next(null);
+      return;
+    }
+    const toggleRef = event.source;
+
+    if (!toggleRef.value || toggleRef.value === '') {
+      return;
+    }
+
+    if (event.value.some((item) => item === toggleRef.value)) {
+      this.category = [toggleRef.value];
+    }
+
+    const requestValue = `${this.type}${this.category}`;
+    this.buttonGroupSubject.next(requestValue);
+    return;
   }
 
   // Called when component is destroyed.

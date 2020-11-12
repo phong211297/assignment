@@ -119,7 +119,33 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     switch (keyword) {
-      case SortKeywordSection.amount: {
+      case SortKeywordSection.newAmount: {
+        this.transactions = this.transactions.sort(
+          (transactionA: Transaction, transactionB: Transaction) => {
+            if (
+              !transactionA ||
+              !transactionA.transaction ||
+              !transactionA.transaction.amountCurrency ||
+              !transactionA.transaction.amountCurrency.amount ||
+              !transactionB ||
+              !transactionB.transaction ||
+              !transactionB.transaction.amountCurrency ||
+              !transactionB.transaction.amountCurrency.amount
+            ) {
+              throw new Error('Invalid transaction data while sorting');
+            }
+
+            return (
+              transactionB.transaction.amountCurrency.amount -
+              transactionA.transaction.amountCurrency.amount
+            );
+          }
+        );
+
+        return;
+      }
+
+      case SortKeywordSection.oldAmount: {
         this.transactions = this.transactions.sort(
           (transactionA: Transaction, transactionB: Transaction) => {
             if (
@@ -145,7 +171,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         return;
       }
 
-      case SortKeywordSection.beneficiary: {
+      case SortKeywordSection.oldBeneficiary: {
         this.transactions = this.transactions.sort(
           (transactionA: Transaction, transactionB: Transaction) => {
             if (
@@ -175,7 +201,37 @@ export class HomeComponent implements OnInit, OnDestroy {
         return;
       }
 
-      case SortKeywordSection.dateOld: {
+      case SortKeywordSection.newBeneficiary: {
+        this.transactions = this.transactions.sort(
+          (transactionA: Transaction, transactionB: Transaction) => {
+            if (
+              !transactionA ||
+              !transactionA.merchant ||
+              !transactionA.merchant.name ||
+              !transactionB ||
+              !transactionB.merchant ||
+              !transactionB.merchant.name
+            ) {
+              throw new Error('Invalid transaction data while sorting');
+            }
+
+            const nameA = transactionA.merchant.name.toLowerCase();
+            const nameB = transactionB.merchant.name.toLowerCase();
+
+            if (nameB < nameA) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+          }
+        );
+
+        return;
+      }
+
+      case SortKeywordSection.oldDate: {
         this.transactions = this.transactions.sort(
           (transactionA: Transaction, transactionB: Transaction) => {
             if (
@@ -198,7 +254,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         return;
       }
 
-      case SortKeywordSection.dateNew: {
+      case SortKeywordSection.newDate: {
         this.transactions = this.transactions.sort(
           (transactionA: Transaction, transactionB: Transaction) => {
             if (

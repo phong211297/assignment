@@ -1,4 +1,4 @@
-<item-control *ngFor="let item of transactions || []">
+<item-control *ngFor="let item of transactions || []" [item-status]="item?.categoryCode">
     <!--Head section-->
     <ng-template section="head">
         <div class="item-heading">

@@ -39,13 +39,10 @@ export class TransferFormComponent implements OnInit, OnDestroy {
   );
 
   // To account controller
-  public toAccountController = new FormControl(
-    'Georgia Power Electric Company',
-    [Validators.required]
-  );
+  public toAccountController = new FormControl('', [Validators.required]);
 
   // Amount controller
-  public amountController = new FormControl('0.00', [
+  public amountController = new FormControl('', [
     Validators.required,
     Validators.min(0),
     Validators.max(this.userBudget - 500),
